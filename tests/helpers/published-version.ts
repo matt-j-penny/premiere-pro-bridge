@@ -9,7 +9,7 @@ import { join } from "node:path";
  * from the npm tarball.
  */
 export function readPublishedVersion(root = process.cwd()): string {
-  const readme = readFileSync(join(root, "README.md"), "utf8");
+  const readme = readFileSync(join(root, "docs/UPSTREAM-README.md"), "utf8");
   const match = readme.match(/^### Latest release: (\d+\.\d+\.\d+)$/m);
   if (!match) throw new Error("README.md is missing a '### Latest release: X.Y.Z' heading");
   return match[1];

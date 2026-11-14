@@ -61,7 +61,7 @@ describe("product claims registry", () => {
   });
 
   it("rejects known stale or unsupported marketing phrases in the README", () => {
-    const readme = read("README.md");
+    const readme = read("docs/UPSTREAM-README.md");
 
     expect(readme).not.toMatch(/49 (?:documented, )?capability-gated tools/i);
     expect(readme).not.toMatch(/editor approved/i);
